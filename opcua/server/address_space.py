@@ -230,7 +230,7 @@ class NodeManagementService(object):
 
         nodedata = NodeData(item.RequestedNewNodeId)
 
-        self._add_node_attributes(nodedata, item, add_timestamps=not check)
+        self._add_node_attributes(nodedata, item, add_timestamps=check)
 
         # now add our node to db
         self._aspace[nodedata.nodeid] = nodedata
